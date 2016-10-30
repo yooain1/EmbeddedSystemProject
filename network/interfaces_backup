@@ -1,0 +1,13 @@
+#/etc/network/interfaces
+# Configure Loopback
+auto lo
+iface lo inet loopback
+
+# User Network setting
+auto eth0
+iface eth0 inet static
+    address 192.168.1.39
+    netmask 255.255.255.0
+    broadcast 192.168.1.255
+    gateway 192.168.1.1
+
