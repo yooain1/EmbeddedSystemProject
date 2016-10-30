@@ -1,0 +1,19 @@
+#!/bin/sh
+#Compile all DDs & Hangul_Clock program
+echo Start compile...
+echo LED DD compile...
+cd led_ioremap
+make
+echo FND DD compile...
+cd ../fnd_ioremap
+make
+echo PUSH DD compile...
+cd ../push_ioremap
+make
+echo Kernel Timer DD compile...
+cd ../kernel_timer
+make
+echo Hangul_Clock program compile...
+cd ../Clock
+arm-linux-gcc Hangul_Clock.c -o Hangul_Clock -lpthread
+echo Compile finished!!!
